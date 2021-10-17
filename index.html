@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixabay 🌊</title>
-    <link rel="stylesheet" href="/pixabay/style.css">
+    <title>Awesome Pixabay</title>
+    <link rel="icon" href="/icon_logo.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/spinner.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
@@ -14,7 +16,8 @@
 
 <body>
     <header>
-        <h2>Pixabay</h2>
+        <h1>Pixabay</h1>
+        <h5>Incredibly beautiful stock pictures for free</h5>
         <form name="queryline">
             <div class="input_btn_line">
                 <input type="text" name="queryField" id="queryField">
@@ -24,19 +27,24 @@
             <div class="form_labels">
                 <label for="popular">
                     Popular content
-                    <input type="checkbox" name="popular" id="popular">
+                    <input type="radio" name="popular_fresh" id="popular" value="popular">
                 </label>
                 <label for="fresh">
                     Fresh content
-                    <input type="checkbox" name="fresh" id="fresh">
+                    <input type="radio" name="popular_fresh" id="fresh" value="latest">
                 </label>
             </div>
         </form>
     </header>
     <div class="content_wrapper">
     </div>
+    <div class="pagination_wrapper">
+    </div>
+    <div class="loader">Loading...
 
-    <script src="/pixabay/script.js"></script>
+    </div>
+
+    <script src="/script.js"></script>
 
 </body>
 
