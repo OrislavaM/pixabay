@@ -1,20 +1,31 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Rubik Mono One', sans-serif;
-    /* background-color: lightgray; */
+    font-family: 'Raleway', sans-serif;
     /* color: indigo; */
+
+}
+
+.loader {
+    opacity: 100%;
 }
 
 body {
     position: relative;
+    height: 100vh;
+    background: #1f4037;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #99f2c8, #1f4037);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #99f2c8, #1f4037);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 header {
     display: grid;
     justify-content: center;
     width: 1000px;
-    border: 1px solid gray;
     margin: 0 auto;
 }
 
@@ -33,21 +44,44 @@ form {
 h1 {
     text-align: center;
     margin: 10px;
+    font-size: 40px;
+    text-shadow: 3px 3px 6px rgb(77, 122, 104);
 }
 
-h5 {
+h4 {
+    padding-bottom: 20px;
     text-align: center;
     margin: 10px;
+    text-shadow: 2px 2px 4px rgb(77, 122, 104);
+}
+
+#queryField,
+#search_btn {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 30px;
 }
 
 #queryField {
-    height: 20px;
-    border: 1px solid black;
-    border-radius: 2px;
+    height: 30px;
+    width: 300px;
+    background: #F9F0DA;
+    padding-left: 10px;
+}
+
+#search_btn {
+    width: 100px;
+    background: #11998e;
+    cursor: pointer;
 }
 
 .input_btn_line {
     margin: 0 auto;
+}
+
+label:hover {
+    text-shadow: 2px 2px 4px gray;
 }
 
 .content_wrapper {
@@ -55,9 +89,9 @@ h5 {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 4px;
-    row-gap: 4px;
-    border: 1px solid gray;
+    column-gap: 10px;
+    row-gap: 10px;
+    /* border: 1px solid gray; */
 }
 
 .wrapper_element {
@@ -68,9 +102,14 @@ h5 {
     width: 100%;
     height: 150px;
     background: darkgrey;
-    border-radius: 4px;
+    border-radius: 5px;
     background-size: cover;
     background-position: center;
+}
+
+.wrapper_element:hover {
+    opacity: 70%;
+    box-shadow: 2px 2px 4px gray;
 }
 
 .fullscreen {
@@ -101,6 +140,8 @@ h5 {
 .page_number {
     text-align: center;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .page_number:hover {
